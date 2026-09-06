@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Alignment Method</title>
+<title>The Alignment Method®</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -234,11 +234,11 @@
     var aS = S.align.done?'Complete':(S.align.goal?'In progress':'Not started');
     return '<div class="kicker">Belief Alchemy Collective</div>'+
     '<img class="hero-img" src="'+HERO_IMG+'" alt="Belief Alchemy Collective">'+
-    '<h1>The Alignment Method</h1>'+
+    '<h1>The Alignment Method®</h1>'+
     '<p class="lede">Uncover the subconscious beliefs that are stopping you, and discover the beliefs you need instead. Your answers stay private in this browser and nothing is sent anywhere.</p>'+
     '<input type="text" id="clientName" placeholder="Your first name" value="'+esc(S.client.name)+'">'+
     '<div class="cards">'+
-      '<div class="mcard" data-start="align"><div class="status'+(S.align.done?' done':'')+'">'+aS+'</div><h3>The Alignment Method</h3><p>Uncover the subconscious beliefs that are stopping you, and discover the beliefs you need instead.</p><div class="cbtn">'+(S.align.goal?'Continue':'Start')+' &rarr;</div></div>'+
+      '<div class="mcard" data-start="align"><div class="status'+(S.align.done?' done':'')+'">'+aS+'</div><h3>The Alignment Method®</h3><p>Uncover the subconscious beliefs that are stopping you, and discover the beliefs you need instead.</p><div class="cbtn">'+(S.align.goal?'Continue':'Start')+' &rarr;</div></div>'+
     '</div>'+
     '<button class="btn" data-go="summary">View summary &amp; save PDF &rarr;</button>'+
     '<button class="btn ghost" data-go="manage">Import or export</button>'+
@@ -269,11 +269,11 @@
   function toast(t,ok){ var m=document.getElementById('msg'); if(!m) return; m.style.display='block'; m.innerHTML=(ok===false?'\u26a0 ':'\u2713 ')+esc(t); m.style.borderColor=(ok===false?'rgba(180,80,70,0.3)':'rgba(58,172,172,0.3)'); }
 
   /* ---------- ALIGNMENT METHOD ---------- */
-  function aWant(){ return '<div class="kicker">The Alignment Method \u00b7 Step 1</div><h1>What do you <em>want?</em></h1><p class="lede">Choose one thing (for now) \u2014 a goal, a feeling, an amount of money, good health, a relationship\u2026 anything.</p><div class="note"><span class="nk">How to answer</span>The thing you have been trying to achieve the most is a great place to start.</div><textarea id="goal" placeholder="I want\u2026">'+esc(S.align.goal)+'</textarea><button class="btn" data-save="goal" data-go="aPayoffs">Continue &rarr;</button>'+backBtn(); }
-  function aPayoffs(){ return '<div class="kicker">The Alignment Method \u00b7 Step 2</div><h1>What\u2019s the <em>benefit</em> of achieving this goal?</h1><p class="lede">When you get what you want, what would that mean to you?</p><div class="note"><span class="nk">For example</span>If you want your dream house \u2014 what would that mean? <em>Stability, safety?</em> If you got more money \u2014 <em>More holidays? Family time?</em></div>'+listEditor('align','payoffs','A benefit \u2026 e.g. freedom')+'<p class="helper">List everything. One thing per line.</p><button class="btn" data-collect="align:payoffs" data-go="aActions">Continue &rarr;</button>'+backBtn(); }
-  function aActions(){ return '<div class="kicker">The Alignment Method \u00b7 Step 3</div><h1>What <em>actions</em> do you <em>KNOW</em> you need to take?</h1><p class="lede">The things you already know you need to do. List them as they come.</p><div class="note"><span class="nk">For example</span>Real, doable actions only. Not \u201cbelieve in myself\u201d \u2014 things you could do tomorrow. e.g. <em>book the class, send the application, ask for the raise, post the offer.</em></div>'+listEditor('align','actions','An action \u2026 e.g. book the class')+'<button class="btn" data-collect="align:actions" data-go="aNotice">Continue &rarr;</button>'+backBtn(); }
+  function aWant(){ return '<div class="kicker">The Alignment Method® \u00b7 Step 1</div><h1>What do you <em>want?</em></h1><p class="lede">Choose one thing (for now) \u2014 a goal, a feeling, an amount of money, good health, a relationship\u2026 anything.</p><div class="note"><span class="nk">How to answer</span>The thing you have been trying to achieve the most is a great place to start.</div><textarea id="goal" placeholder="I want\u2026">'+esc(S.align.goal)+'</textarea><button class="btn" data-save="goal" data-go="aPayoffs">Continue &rarr;</button>'+backBtn(); }
+  function aPayoffs(){ return '<div class="kicker">The Alignment Method® \u00b7 Step 2</div><h1>What\u2019s the <em>benefit</em> of achieving this goal?</h1><p class="lede">When you get what you want, what would that mean to you?</p><div class="note"><span class="nk">For example</span>If you want your dream house \u2014 what would that mean? <em>Stability, safety?</em> If you got more money \u2014 <em>More holidays? Family time?</em></div>'+listEditor('align','payoffs','A benefit \u2026 e.g. freedom')+'<p class="helper">List everything. One thing per line.</p><button class="btn" data-collect="align:payoffs" data-go="aActions">Continue &rarr;</button>'+backBtn(); }
+  function aActions(){ return '<div class="kicker">The Alignment Method® \u00b7 Step 3</div><h1>What <em>actions</em> do you <em>KNOW</em> you need to take?</h1><p class="lede">The things you already know you need to do. List them as they come.</p><div class="note"><span class="nk">For example</span>Real, doable actions only. Not \u201cbelieve in myself\u201d \u2014 things you could do tomorrow. e.g. <em>book the class, send the application, ask for the raise, post the offer.</em></div>'+listEditor('align','actions','An action \u2026 e.g. book the class')+'<button class="btn" data-collect="align:actions" data-go="aNotice">Continue &rarr;</button>'+backBtn(); }
   function aNotice(){ var p=S.align.payoffs.filter(t=>t.trim()),a=S.align.actions.filter(t=>t.trim());
-    return '<div class="kicker">The Alignment Method \u00b7 Step 4</div><h1>You know you are <em>able</em> to take those actions\u2026</h1><p class="lede">Have you ever wondered why you don\u2019t just do what you need to, even though you know that you can?</p>'+
+    return '<div class="kicker">The Alignment Method® \u00b7 Step 4</div><h1>You know you are <em>able</em> to take those actions\u2026</h1><p class="lede">Have you ever wondered why you don\u2019t just do what you need to, even though you know that you can?</p>'+
     '<div class="recap"><div class="rk">The benefits</div>'+p.map(t=>'<div class="ri">'+esc(t)+'</div>').join('')+'</div>'+
     '<div class="recap"><div class="rk">What you said you need to do</div>'+a.map(t=>'<div class="ri">'+esc(t)+'</div>').join('')+'</div>'+
     '<p class="helper">Are you starting to understand that maybe there is something subconsciously stopping you?</p>'+
@@ -288,7 +288,7 @@
 
   function startBeliefs(){ S.align.dividerShown=false; askBenefit(0); }
   function askBenefit(idx){ var its=aItems(); if(idx>=its.length){ go('aRevealed'); return; } var it=its[idx]; if(it.type==='action'&&!S.align.dividerShown){ S.align.dividerShown=true; renderDivider(idx); return;} renderBenefit(idx); }
-  function renderDivider(idx){ app.innerHTML=''; app.appendChild(el('<div><div class="kicker">The Alignment Method \u00b7 Step 5</div><div class="heart">\u2764</div><h1>Now the same with your <em>actions</em>, '+esc(cn())+'.</h1><p class="lede">For each action \u2014 ask, with your hand on your heart, how does <em>not</em> taking it secretly keep you safe?</p><button class="btn" id="dn">Continue &rarr;</button></div>')); document.getElementById('dn').onclick=function(){ renderBenefit(idx); }; }
+  function renderDivider(idx){ app.innerHTML=''; app.appendChild(el('<div><div class="kicker">The Alignment Method® \u00b7 Step 5</div><div class="heart">\u2764</div><h1>Now the same with your <em>actions</em>, '+esc(cn())+'.</h1><p class="lede">For each action \u2014 ask, with your hand on your heart, how does <em>not</em> taking it secretly keep you safe?</p><button class="btn" id="dn">Continue &rarr;</button></div>')); document.getElementById('dn').onclick=function(){ renderBenefit(idx); }; }
   function renderBenefit(idx){
     var its=aItems(),it=its[idx],key=it.type+'::'+it.text,total=its.length;
     var arr=it.type==='benefit'?S.align.payoffs.filter(t=>t.trim()):S.align.actions.filter(t=>t.trim());
@@ -298,7 +298,7 @@
     var body=it.type==='benefit'?'There is always a subconscious benefit to not having what you \u2018think\u2019 you want. It always links to safety \u2014 from being seen, judged, hurt, or losing what you\u2019ve got.':'You <em>KNOW</em> you could realistically do this. So why aren\u2019t you? There\u2019s always a subconscious benefit, and it always links to safety.';
     var lab=it.type==='benefit'?'Not having\u2026':'Not doing\u2026';
     app.innerHTML='';
-    app.appendChild(el('<div><div class="kicker">The Alignment Method \u00b7 Question '+(idx+1)+' of '+total+'</div>'+recap+'<h1>'+heading+'</h1><div class="note"><span class="nk">'+lab+'</span><div style="text-align:center;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold)">'+esc(it.text)+'</div></div><p class="helper">'+body+'</p><p class="helper"><b>Go with the first thing</b> your brain tells you, even if it doesn\u2019t make sense.</p><textarea id="ba" placeholder="A sentence is plenty. Use your own words.">'+esc(S.align.benefit[key]||'')+'</textarea><button class="btn" id="bn">Next &rarr;</button><button class="back" id="bb">&larr; Back</button></div>'));
+    app.appendChild(el('<div><div class="kicker">The Alignment Method® \u00b7 Question '+(idx+1)+' of '+total+'</div>'+recap+'<h1>'+heading+'</h1><div class="note"><span class="nk">'+lab+'</span><div style="text-align:center;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold)">'+esc(it.text)+'</div></div><p class="helper">'+body+'</p><p class="helper"><b>Go with the first thing</b> your brain tells you, even if it doesn\u2019t make sense.</p><textarea id="ba" placeholder="A sentence is plenty. Use your own words.">'+esc(S.align.benefit[key]||'')+'</textarea><button class="btn" id="bn">Next &rarr;</button><button class="back" id="bb">&larr; Back</button></div>'));
     var ta=document.getElementById('ba');
     document.getElementById('bn').onclick=function(){ S.align.benefit[key]=ta.value.trim(); save(); askBenefit(idx+1); };
     document.getElementById('bb').onclick=function(){ S.align.benefit[key]=ta.value; save(); if(idx===0){ current='aNotice'; render(); } else { if(its[idx].type==='action'&&its[idx-1].type==='benefit') S.align.dividerShown=false; askBenefit(idx-1);} };
@@ -306,12 +306,12 @@
   function aRevealed(){
     var its=aItems();
     var cards=its.map(function(it){var key=it.type+'::'+it.text;return '<div class="choicebox"><div style="text-align:center;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--text)">&ldquo;'+esc(S.align.benefit[key]||'')+'&rdquo;</div><div style="text-align:center;font-size:9.5px;letter-spacing:1.3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:7px">From the '+it.type+' \u00b7 <span style="color:var(--text-muted)">'+esc(it.text)+'</span></div></div>';}).join('');
-    return '<div class="kicker">The Alignment Method \u00b7 Step 6</div><h1>This is what you really <em>believe</em> will happen if you get what you want.</h1><div class="pill"><div class="lbl">What you said you want</div><div class="big">'+esc(S.align.goal)+'</div></div>'+cards+'<p class="lede"><em>'+esc(cn())+'</em>, doesn\u2019t it make sense why this hasn\u2019t happened <em>yet?</em></p><p class="helper">Debbie will help you transform what you actually believe into what you <em>need</em> to believe to be in alignment.</p><button class="btn" data-go="aChoose">Yes &rarr;</button>'+backBtn();
+    return '<div class="kicker">The Alignment Method® \u00b7 Step 6</div><h1>This is what you really <em>believe</em> will happen if you get what you want.</h1><div class="pill"><div class="lbl">What you said you want</div><div class="big">'+esc(S.align.goal)+'</div></div>'+cards+'<p class="lede"><em>'+esc(cn())+'</em>, doesn\u2019t it make sense why this hasn\u2019t happened <em>yet?</em></p><p class="helper">Debbie will help you transform what you actually believe into what you <em>need</em> to believe to be in alignment.</p><button class="btn" data-go="aChoose">Yes &rarr;</button>'+backBtn();
   }
   function aChoose(){
     var its=aItems();
     var cards=its.map(function(it){var key=it.type+'::'+it.text,done=S.align.confirmed[key];return '<div class="bcard"><div class="bcap">Current belief</div><div class="bname">&ldquo;'+esc(S.align.benefit[key]||'')+'&rdquo;</div><div class="arrowd">&darr;</div><div class="chlbl">Your chosen belief</div><textarea data-chosen="'+esc(key)+'" placeholder="In your own words.">'+esc(S.align.chosen[key]||'')+'</textarea><div class="qlil">Would this move you toward what you want?</div><button class="confirm'+(done?' done':'')+'" data-confirm="'+esc(key)+'">'+(done?'\u2713 Confirmed':'Yes \u2014 this would move me toward what I want')+'</button></div>';}).join('');
-    return '<div class="kicker">The Alignment Method \u00b7 Step 6</div><h1>What do you need to <em>believe</em> instead?</h1><p class="lede">For each belief running underneath, write the opposite \u2014 the belief you\u2019d need to have instead.</p>'+cards+'<div class="note"><span class="nk">One last thing</span>If you had those chosen beliefs, what would you do differently? How would you show up? And would you receive what you want?</div><textarea id="fa" placeholder="A few lines is plenty.">'+esc(S.align.finalAnswer)+'</textarea><button class="btn" data-build>See the full picture &rarr;</button>'+backBtn();
+    return '<div class="kicker">The Alignment Method® \u00b7 Step 6</div><h1>What do you need to <em>believe</em> instead?</h1><p class="lede">For each belief running underneath, write the opposite \u2014 the belief you\u2019d need to have instead.</p>'+cards+'<div class="note"><span class="nk">One last thing</span>If you had those chosen beliefs, what would you do differently? How would you show up? And would you receive what you want?</div><textarea id="fa" placeholder="A few lines is plenty.">'+esc(S.align.finalAnswer)+'</textarea><button class="btn" data-build>See the full picture &rarr;</button>'+backBtn();
   }
 
   /* ---------- SUMMARY ---------- */
@@ -320,7 +320,7 @@
     out+='<div class="sumhead"><div><div class="seclabel" style="margin:0">Belief Clarity Summary</div><div class="st">'+esc(S.client.name||'Client')+'</div></div><div class="sd">'+esc(S.client.date||todayStr())+'</div></div>';
     var any=false;
     if(S.align.goal){ any=true; out+=alignSummary(); }
-    if(!any){ out+='<p class="lede" style="margin-top:20px">Nothing captured yet. Complete The Alignment Method from the menu, then come back here to save the PDF.</p>'; }
+    if(!any){ out+='<p class="lede" style="margin-top:20px">Nothing captured yet. Complete The Alignment Method® from the menu, then come back here to save the PDF.</p>'; }
     else { out+='<div class="contactbar">Your next step, '+esc(cn())+': reach out to Debbie to take this further. <b class="editable" contenteditable="true" data-edit="contact">'+esc(S.contact)+'</b><br>OR book a FREE 30-minute Belief Clarity Call with Debbie: <b><a href="https://calendly.com/greenstarhealing-info/30-minute-belief-clarity-call-with-debbie" target="_blank" rel="noopener" style="color:var(--gold)">Book here</a></b></div>'; }
     if(any){ out+='<div class="deeperbox no-print"><h2>Ready to go deeper?</h2><p>Most likely, you have started to see your patterns emerging. But if awareness alone was enough, this pattern would already be gone. This is exactly where most people stay stuck. Inside the Belief Alchemy Collective, we do not just identify the belief, we recode it at the subconscious level so that your behaviour actually changes.</p><a class="btn" href="https://www.skool.com/mooncoding-5748/about" target="_blank" rel="noopener">Join the Belief Alchemy Collective</a><div class="upgrade">Already a member and wish to upgrade to Premium? <a href="https://www.skool.com/mooncoding-5748/plans" target="_blank" rel="noopener">Belief Alchemy Collective</a></div></div>'; }
     return out;
@@ -328,7 +328,7 @@
   function alignSummary(){
     var payoffs=S.align.payoffs.filter(t=>t.trim()),actions=S.align.actions.filter(t=>t.trim());
     function grp(label,arr,type){ if(!arr.length) return ''; return '<div class="seclabel">'+label+'</div><div class="group">'+arr.map(function(t){var key=type+'::'+t.trim();return '<div class="gitem"><div class="gcap">'+type+'</div><div class="gname">'+esc(t)+'</div><div class="gpair"><div class="gcell gc"><div class="gmini">Current belief</div><div class="gtxt">&ldquo;'+esc(S.align.benefit[key]||'\u2014')+'&rdquo;</div></div><div class="ga">&rarr;</div><div class="gcell gh"><div class="gmini">Chosen belief</div><div class="gtxt">&ldquo;'+esc(S.align.chosen[key]||'\u2014')+'&rdquo;</div></div></div></div>';}).join('')+'</div>'; }
-    return '<div class="sumsec"><div class="sh">The Alignment Method</div>'+
+    return '<div class="sumsec"><div class="sh">The Alignment Method®</div>'+
       '<div class="pill"><div class="lbl">What you want</div><div class="big">'+esc(S.align.goal)+'</div></div>'+
       grp('Benefits and the beliefs underneath',payoffs,'benefit')+
       grp('Actions and the beliefs underneath',actions,'action')+
@@ -342,12 +342,12 @@
   /* ---------- export / import helpers ---------- */
   function exportDocText(){
     var L=[];
-    L.push('BELIEF CLARITY SUMMARY \u2014 THE ALIGNMENT METHOD');
+    L.push('BELIEF CLARITY SUMMARY \u2014 THE ALIGNMENT METHOD\u00ae');
     L.push('Client: '+(S.client.name||'\u2014'));
     L.push('Date: '+(S.client.date||todayStr()));
     L.push('');
     if(S.align.goal){
-      L.push('== THE ALIGNMENT METHOD ==');
+      L.push('== THE ALIGNMENT METHOD\u00ae ==');
       L.push('What you want: '+S.align.goal);
       L.push('');
       var pf=S.align.payoffs.filter(t=>t.trim()), ac=S.align.actions.filter(t=>t.trim());
